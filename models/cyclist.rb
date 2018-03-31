@@ -98,4 +98,16 @@ class Cyclist
     return total_routes
   end
 
+  def routes()
+    sql = "SELECT * FROM routes
+            INNER JOIN rides ON
+            routes.id = rides.route_id
+            INNER JOIN cyclists ON
+            rides.cyclist_id = cyclists.id
+            WHERE cyclists.id = $1;"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    routes = result.map { |route| Route.new(route)}
+    return routes
+  end
 end

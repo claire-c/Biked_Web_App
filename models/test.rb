@@ -24,3 +24,5 @@ p cyclist.total_miles()
 p cyclist.total_climb()
 
 p cyclist.total_routes()
+
+p cyclist.routes()
