@@ -12,28 +12,11 @@ puts " "
 p Ride.all()
 puts " "
 
-cyclist = Cyclist.find(5)
+cyclist = Cyclist.find(4)
 
 
 route = Route.find(3)
 
 ride = Ride.find(1)
 
-
-route.elevation = 1000
-route.update()
-
-p Route.all()
-puts " "
-
-ride.cyclist_id = 4
-ride.update()
-
-p Ride.all()
-puts " "
-
-cyclist.name = "Suzanne White"
-cyclist.update()
-
-p Cyclist.all()
-puts " "
+p cyclist.total_miles()

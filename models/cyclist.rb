@@ -59,4 +59,20 @@ class Cyclist
     SqlRunner.run(sql, values)
   end
 
+  def total_miles()
+    sql = "SELECT SUM(distance)FROM routes
+            INNER JOIN rides ON
+            routes.id = rides.route_id
+            INNER JOIN cyclists ON
+            rides.cyclist_id = cyclists.id
+            WHERE cyclists.id = $1;"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    return total_miles = result[0]['sum'].to_i
+  end
+
+  def total_elevation()
+
+  end
+
 end

@@ -27,7 +27,6 @@ You must be able to create new bike rides you have undertaken for specific route
 Each user should be able to see:
 <ul><li>total number of miles cycled</li>
 <li>total climb (elevation)</li>
-<li>total calories burned</li>
 <li>total number of routes cycled</li>
 </ul>
 <p></p>
