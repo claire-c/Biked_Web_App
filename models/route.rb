@@ -15,7 +15,25 @@ class Route
 
   def self.delete_all()
     sql = "DELETE FROM routes;"
-    SQLRunner.run(sql)
+    SqlRunner.run(sql)
+  end
+
+  def self.all()
+    sql = "SELECT * FROM routes;"
+    result = SqlRunner.run(sql)
+    return result.map { |route| Route.new(route)}
+  end
+
+  def save()
+    sql = "INSERT INTO routes
+            (title, distance, elevation)
+            VALUES
+            ($1, $2, $3)
+            RETURNING id;"
+    values = [@title, @distance, @elevation]
+    result = SqlRunner.run(sql, values)
+    @id = result[0]['id'].to_i
+
   end
 
 end
