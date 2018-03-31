@@ -41,8 +41,6 @@ post "/routes/:id" do
   redirect to("/routes")
 end
 
-
-
 #show individual route
 get "/routes/:id" do
   @route = Route.find(params[:id].to_i)
