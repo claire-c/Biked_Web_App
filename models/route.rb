@@ -1,5 +1,6 @@
 require('pry')
 require_relative('../db/sql_runner.rb')
+require_relative('cyclist.rb')
 
 class Route
 
@@ -59,6 +60,19 @@ class Route
             WHERE id = $1;"
     values = [@id]
     SqlRunner.run(sql, values)
+  end
+
+  def cyclists()
+    sql = "SELECT * FROM cyclists
+            INNER JOIN rides ON
+            cyclists.id = rides.cyclist_id
+            INNER JOIN routes ON
+            routes.id = rides.route_id
+            WHERE routes.id = $1;"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
+    cyclists = result.map {|cyclist| Cyclist.new(cyclist)}
+    return cyclists
   end
 
 end

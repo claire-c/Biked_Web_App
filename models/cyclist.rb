@@ -1,5 +1,6 @@
 require('pry')
 require_relative('../db/sql_runner.rb')
+require_relative('route.rb')
 
 class Cyclist
 
@@ -85,18 +86,18 @@ class Cyclist
     return total_climb
   end
 
-  def total_routes()
-    sql = "SELECT COUNT(*) FROM routes
-            INNER JOIN rides ON
-            routes.id = rides.route_id
-            INNER JOIN cyclists ON
-            rides.cyclist_id = cyclists.id
-            WHERE cyclists.id = $1;"
-    values = [@id]
-    result = SqlRunner.run(sql, values)
-    total_routes = result[0]['count'].to_i
-    return total_routes
-  end
+  # def total_routes()
+  #   sql = "SELECT COUNT(*) FROM routes
+  #           INNER JOIN rides ON
+  #           routes.id = rides.route_id
+  #           INNER JOIN cyclists ON
+  #           rides.cyclist_id = cyclists.id
+  #           WHERE cyclists.id = $1;"
+  #   values = [@id]
+  #   result = SqlRunner.run(sql, values)
+  #   total_routes = result[0]['count'].to_i
+  #   return total_routes
+  # end
 
   def routes()
     sql = "SELECT * FROM routes
