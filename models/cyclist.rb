@@ -85,5 +85,9 @@ class Cyclist
     return sum
   end
 
+  def total_routes()
+    routes().length
+  end
+
 
 end

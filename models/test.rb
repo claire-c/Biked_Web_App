@@ -3,14 +3,6 @@ require_relative('cyclist.rb')
 require_relative('ride.rb')
 require_relative('route.rb')
 
-# p Cyclist.all()
-# puts " "
-#
-# p Route.all()
-# puts " "
-#
-# p Ride.all()
-# puts " "
 
 cyclist = Cyclist.find(4)
 
@@ -28,3 +20,5 @@ p cyclist.total_climb()
 p cyclist.routes()
 
 p route.cyclists().length
+
+p cyclist.total_routes

@@ -75,4 +75,8 @@ class Route
     return cyclists
   end
 
+  def total_cyclists()
+    cyclists().length
+  end
+
 end
