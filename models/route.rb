@@ -24,6 +24,15 @@ class Route
     return result.map { |route| Route.new(route)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM routes
+            WHERE id = $1;"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    route = result.map { |route| Route.new(route)}
+    return route[0]
+  end
+
   def save()
     sql = "INSERT INTO routes
             (title, distance, elevation)
@@ -33,7 +42,16 @@ class Route
     values = [@title, @distance, @elevation]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id'].to_i
+  end
 
+  def update()
+    sql = "UPDATE routes SET
+            (title, distance, elevation)
+            =
+            ($1, $2, $3)
+            WHERE id = $4;"
+    values = [@title, @distance, @elevation, @id]
+    SqlRunner.run(sql, values)
   end
 
 end

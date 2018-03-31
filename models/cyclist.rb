@@ -22,6 +22,15 @@ class Cyclist
     return result.map { |cyclist| Cyclist.new(cyclist)}
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM cyclists
+            WHERE id = $1;"
+    values = [id]
+    result = SqlRunner.run(sql, values)
+    cyclist = result.map { |cyclist| Cyclist.new(cyclist)}
+    return cyclist[0]
+  end
+
   def save()
     sql = "INSERT INTO cyclists
             (name)
@@ -33,5 +42,14 @@ class Cyclist
     @id = result[0]['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE cyclists SET
+            name
+            =
+            $1
+            WHERE id = $2;"
+    values = [@name, @id]
+    SqlRunner.run(sql, values)
+  end
 
 end
