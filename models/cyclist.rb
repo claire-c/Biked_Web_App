@@ -74,20 +74,14 @@ class Cyclist
   end
 
   def total_climb()
-    array = routes()
     sum = 0
-    array.each do |route|
-       sum += route.elevation
-    end
+    routes().each {|route| sum += route.elevation}
     return sum
   end
 
   def total_miles()
-    array = routes()
     sum = 0
-    array.each do |route|
-       sum += route.distance
-    end
+    routes().each {|route| sum += route.distance}
     return sum
   end
 
