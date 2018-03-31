@@ -60,45 +60,6 @@ class Cyclist
     SqlRunner.run(sql, values)
   end
 
-  def total_miles()
-    sql = "SELECT SUM(distance) FROM routes
-            INNER JOIN rides ON
-            routes.id = rides.route_id
-            INNER JOIN cyclists ON
-            rides.cyclist_id = cyclists.id
-            WHERE cyclists.id = $1;"
-    values = [@id]
-    result = SqlRunner.run(sql, values)
-    total_miles = result[0]['sum'].to_i
-    return total_miles
-  end
-
-  def total_climb()
-    sql = "SELECT SUM(elevation) FROM routes
-            INNER JOIN rides ON
-            routes.id = rides.route_id
-            INNER JOIN cyclists ON
-            rides.cyclist_id = cyclists.id
-            WHERE cyclists.id = $1;"
-    values = [@id]
-    result = SqlRunner.run(sql, values)
-    total_climb = result[0]['sum'].to_i
-    return total_climb
-  end
-
-  # def total_routes()
-  #   sql = "SELECT COUNT(*) FROM routes
-  #           INNER JOIN rides ON
-  #           routes.id = rides.route_id
-  #           INNER JOIN cyclists ON
-  #           rides.cyclist_id = cyclists.id
-  #           WHERE cyclists.id = $1;"
-  #   values = [@id]
-  #   result = SqlRunner.run(sql, values)
-  #   total_routes = result[0]['count'].to_i
-  #   return total_routes
-  # end
-
   def routes()
     sql = "SELECT * FROM routes
             INNER JOIN rides ON
@@ -111,4 +72,24 @@ class Cyclist
     routes = result.map { |route| Route.new(route)}
     return routes
   end
+
+  def total_climb()
+    array = routes()
+    sum = 0
+    array.each do |route|
+       sum += route.elevation
+    end
+    return sum
+  end
+
+  def total_miles()
+    array = routes()
+    sum = 0
+    array.each do |route|
+       sum += route.distance
+    end
+    return sum
+  end
+
+
 end
