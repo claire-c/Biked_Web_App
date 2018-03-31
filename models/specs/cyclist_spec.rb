@@ -9,8 +9,12 @@ class CyclistTest < MiniTest::Test
    @cyclist = Cyclist.new({'name' => 'Joe Bloggs'})
   end
 
-  def test_name()
+  def test_name_true()
     assert_equal("Joe Bloggs", @cyclist.name)
+  end
+
+  def test_id()
+    assert_nil(@cyclist.id)
   end
 
 
