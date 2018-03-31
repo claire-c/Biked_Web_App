@@ -11,6 +11,10 @@ class Cyclist
     @name = hash['name']
   end
 
+  def self.delete_all()
+    sql = "DELETE FROM cyclists;"
+    SqlRunner.run(sql)
+  end
 
 
 end

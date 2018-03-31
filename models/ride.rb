@@ -12,6 +12,11 @@ class Ride
     @cyclist_id = hash['cyclist_id'].to_i
   end
 
+def self.delete_all()
+  sql = "DELETE FROM rides;"
+  SqlRunner.run(sql)
+
+end
 
 
 end

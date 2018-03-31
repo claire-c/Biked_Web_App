@@ -13,6 +13,9 @@ class Route
     @elevation = hash['elevation'].to_i
   end
 
-
+  def self.delete_all()
+    sql = "DELETE FROM routes;"
+    SQLRunner.run(sql)
+  end
 
 end
