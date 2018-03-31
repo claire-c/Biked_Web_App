@@ -16,21 +16,4 @@ class RideTest < MiniTest::Test
   end
 
 
-  # def test_id()
-  #   assert_nil(@ride.id)
-  # end
-  #
-  # def test_route_id()
-  #   assert_nil(@ride.route_id)
-  # end
-  #
-  # def test_cyclist_id()
-  #   assert_nil(@ride.cyclist_id)
-  # end
-
-  def test_total_hours()
-assert_equal(35, @ride.total_hours)
-  end
-
-
 end

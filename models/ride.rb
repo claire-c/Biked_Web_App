@@ -10,7 +10,6 @@ class Ride
     @id = hash['id'].to_i if hash['id']
     @route_id = hash['route_id'].to_i
     @cyclist_id = hash['cyclist_id'].to_i
-    @total_hours = hash['total_hours'].to_i
   end
 
 
