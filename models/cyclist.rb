@@ -89,5 +89,9 @@ class Cyclist
     routes().length
   end
 
+  def route_names()
+    routes().each {|route| puts route.title}
+  end
+
 
 end

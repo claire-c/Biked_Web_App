@@ -1,0 +1,15 @@
+<h1><%= @cyclist.name %>'s Biked Profile</h1>
+
+<p>Stats:</p>
+<p>Total routes completed: <%= @cyclist.total_routes() %> out of 10 </p>
+<p>Route titles: <%= @cyclist.route_names() %></p>
+<p>Total miles cycled: <%= @cyclist.total_miles() %><p>
+<p>Total feet climbed: <%= @cyclist.total_climb() %></p>
+<p>
+
+
+<p><a href="/cyclists/<%= @cyclist.id %>/edit">Edit <%= @cyclist.name() %>'s profile</a></p>
+
+<form method="post" action="/cyclists/<%= @cyclist.id %>/delete">
+     <input type="submit" value="Delete Profile" />
+   </form>

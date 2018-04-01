@@ -11,14 +11,10 @@ route = Route.find(4)
 
 ride = Ride.find(1)
 
-p cyclist.total_miles()
-
-p cyclist.total_climb()
+# p cyclist.total_miles()
+#
+# p cyclist.total_climb()
 
 #p cyclist.total_routes()
 
-p cyclist.routes()
-
-p route.cyclists().length
-
-p cyclist.total_routes
+p cyclist.route_names()

@@ -1,0 +1,10 @@
+
+<p>All cyclists</p>
+
+<% @cyclists.each do |cyclist|  %>
+  <p>Name: <%= cyclist.name() %></p>
+  <p>Total routes cycled: <%= cyclist.total_routes() %> </p>
+  <p><a href="/cyclists/<%= cyclist.id %>">Go to profile</a></p>
+  <p></p>
+  <hr/>
+<% end %>
