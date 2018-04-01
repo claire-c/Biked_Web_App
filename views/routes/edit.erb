@@ -1,0 +1,11 @@
+<form method="post" action="/routes/<%= @route.id %>">
+  <label for="title-field">Title:</label>
+  <input
+  type="text"
+  name="title"
+  id="title-field"
+  value="<%= @route.title %>"
+  />
+
+  <input type='submit' value="Edit Route">
+</form>
