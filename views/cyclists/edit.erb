@@ -1,0 +1,11 @@
+<form method="post" action="/cyclists/<%= @cyclist.id %>">
+  <label for="name-field">Name:</label>
+  <input
+  type="text"
+  name="name"
+  id="name-field"
+  value="<%= @cyclist.name %>"
+  />
+
+  <input type='submit' value="Edit Profile">
+</form>

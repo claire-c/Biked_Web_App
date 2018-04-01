@@ -1,7 +1,10 @@
 <h1><%= @cyclist.name %>'s Biked Profile</h1>
 
+<a href="/rides/new">Add a new ride!</a></p>
+<!-- Am I able to add another part of a path to this to make it unique to the cyclist? To make the form easier to complete...  -->
+
 <p>Stats:</p>
-<p>Total routes completed: <%= @cyclist.total_routes() %> out of 10 </p>
+<p>Total rides completed: <%= @cyclist.total_routes() %></p>
 <p>Route titles:</p>
 <p><% @routes.each do |route| %>
 <%= route %></p>
@@ -9,6 +12,7 @@
 <p>Total miles cycled: <%= @cyclist.total_miles() %><p>
 <p>Total feet climbed: <%= @cyclist.total_climb() %></p>
 <p>
+
 
 
 <p><a href="/cyclists/<%= @cyclist.id %>/edit">Edit <%= @cyclist.name() %>'s profile</a></p>
