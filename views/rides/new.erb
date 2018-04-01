@@ -1,0 +1,23 @@
+<h1>Add a ride!</h1>
+
+<form action="/rides" method="post">
+  <label>
+  Select a cyclist:
+    <select name="cyclist_id">
+      <% for cyclist in @cyclists %>
+      <option value="<%= cyclist.id %>"><%= cyclist.name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <label>
+    Select a route:
+    <select name="route_id">
+      <% for route in @routes %>
+      <option value="<%= route.id %>"><%= route.title %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <input type='submit' value="Add ride!">
+</form>

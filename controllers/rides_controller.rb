@@ -18,6 +18,8 @@ end
 
 #get form to create new ride
 get "/rides/new" do
+  @cyclists = Cyclist.all()
+  @routes = Route.all()
   erb(:"rides/new")
 end
 
