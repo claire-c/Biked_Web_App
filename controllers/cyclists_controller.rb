@@ -44,5 +44,6 @@ end
 #show individual cyclist
 get "/cyclists/:id" do
   @cyclist = Cyclist.find(params[:id].to_i)
+  @routes = @cyclist.route_names
   erb(:"cyclists/show")
 end

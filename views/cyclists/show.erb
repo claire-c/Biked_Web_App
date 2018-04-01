@@ -2,7 +2,10 @@
 
 <p>Stats:</p>
 <p>Total routes completed: <%= @cyclist.total_routes() %> out of 10 </p>
-<p>Route titles: <%= @cyclist.route_names() %></p>
+<p>Route titles:</p>
+<p><% @routes.each do |route| %>
+<%= route %></p>
+<% end %>
 <p>Total miles cycled: <%= @cyclist.total_miles() %><p>
 <p>Total feet climbed: <%= @cyclist.total_climb() %></p>
 <p>

@@ -90,7 +90,8 @@ class Cyclist
   end
 
   def route_names()
-    routes().each {|route| puts route.title}
+    titles = routes().map {|route| route.title}
+    return titles
   end
 
 
