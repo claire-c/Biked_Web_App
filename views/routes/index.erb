@@ -1,0 +1,11 @@
+
+<h1>All routes</h1>
+<p><a href="/routes/new">Add a new route</a></p>
+
+<% @routes.each do |route|  %>
+  <p>Title: <%= route.title() %></p>
+  <p>Times logged: <%= route.total_cyclists() %> </p>
+  <p><a href="/routes/<%= route.id %>">Go to route information</a></p>
+  <p></p>
+  <hr/>
+<% end %>
