@@ -17,4 +17,8 @@ ride = Ride.find(1)
 
 #p cyclist.total_routes()
 
-p cyclist.route_names()
+#p cyclist.route_names()
+
+p cyclist
+
+p ride.get_cyclist().name

@@ -62,14 +62,12 @@ class Ride
     SqlRunner.run(sql, values)
   end
 
-  def get_cyclist_name()
-    cyclist = Cyclist.find(@cyclist_id)
-    return cyclist.name
+  def get_cyclist()
+    Cyclist.find(@cyclist_id)
   end
 
-  def get_route_title()
-    route = Route.find(@route_id)
-    return route.title
+  def get_route()
+    Route.find(@route_id)
   end
 
 end
