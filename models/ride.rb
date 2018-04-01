@@ -1,5 +1,7 @@
 require('pry')
 require_relative('../db/sql_runner.rb')
+require_relative('route.rb')
+require_relative('cyclist.rb')
 
 class Ride
 
@@ -60,5 +62,14 @@ class Ride
     SqlRunner.run(sql, values)
   end
 
+  def get_cyclist_name()
+    cyclist = Cyclist.find(@cyclist_id)
+    return cyclist.name
+  end
+
+  def get_route_title()
+    route = Route.find(@route_id)
+    return route.title
+  end
 
 end
