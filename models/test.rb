@@ -19,8 +19,10 @@ ride = Ride.find(1)
 
 #p cyclist.route_names()
 
-p cyclist
+# p cyclist
+#
+# p ride.date_logged()
+#
+# p ride.completion_time()
 
-p ride.date_logged()
-
-p ride.completion_time()
+p Ride.ordered()

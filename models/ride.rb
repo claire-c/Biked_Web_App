@@ -75,4 +75,11 @@ class Ride
     Route.find(@route_id)
   end
 
+#list all rides in date order from newest to oldest.
+  def self.ordered()
+    all_rides = Ride.all()
+    date_order = all_rides.sort {|ride| ride.date_logged}
+    return date_order.reverse
+  end
+
 end

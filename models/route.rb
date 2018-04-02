@@ -75,8 +75,19 @@ class Route
     return cyclists
   end
 
+#Total cyclists who have done route.
   def total_cyclists()
     cyclists().length
+  end
+
+#average time to complete a route.
+  def average_time()
+
+  end
+
+#Sort cyclists' times from quickest to slowest
+  def time_leaderboard()
+
   end
 
 end
