@@ -19,7 +19,8 @@ class Cyclist
   end
 
   def self.all()
-    sql = "SELECT * FROM cyclists;"
+    sql = "SELECT * FROM cyclists
+            ORDER BY name;"
     result = SqlRunner.run(sql)
     return result.map { |cyclist| Cyclist.new(cyclist)}
   end
@@ -103,7 +104,9 @@ class Cyclist
 
 
   def self.most_rides()
-
+    cyclists = Cyclist.all()
+    most_rides = cyclists.sort { |c1, c2| c1.total_routes <=> c2.total_routes }
+    return most_rides.last()
   end
 
   def self.most_climb
