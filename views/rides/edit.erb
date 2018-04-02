@@ -1,23 +1,23 @@
 <h1>Edit ride</h1>
 
 <form action="/rides/<%= @ride.id %>" method="post">
-  <label>
-  Select a cyclist:
-    <select name="cyclist_id">
+  <label for="cyclist-selection">
+  Select a cyclist:</label>
+    <select name="cyclist_id" id="cyclist-selection">
       <% for cyclist in @cyclists %>
-      <option value="<%= cyclist.id %>"><%= cyclist.name %></option>
+      <option value="<%= cyclist.id %>" <%= "selected" if @ride.cyclist_id == cyclist.id %> ><%= cyclist.name %></option>
       <% end %>
     </select>
-  </label>
 
-  <label>
-    Select a route:
-    <select name="route_id">
+
+  <label for="route_selection">
+    Select a route:</label>
+    <select name="route_id" id="route-selection">
       <% for route in @routes %>
-      <option value="<%= route.id %>"><%= route.title %></option>
+      <option value="<%= route.id %>" <%= "selected" if @ride.route_id == route.id%> ><%= route.title %></option>
       <% end %>
     </select>
-  </label>
+
 
   <input type='submit' value="Edit ride!">
 </form>
