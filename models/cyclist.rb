@@ -1,6 +1,7 @@
 require('pry')
 require_relative('../db/sql_runner.rb')
 require_relative('route.rb')
+require_relative('ride.rb')
 
 class Cyclist
 
@@ -94,5 +95,21 @@ class Cyclist
     return titles
   end
 
+  def self.most_miles()
+    cyclists = Cyclist.all()
+    most_miles = cyclists.sort { |c1, c2| c1.total_miles <=> c2.total_miles }
+    return most_miles.last()
+  end
+
+
+  def self.most_rides()
+
+  end
+
+  def self.most_climb
+    cyclists = Cyclist.all()
+    most_climb = cyclists.sort { |c1, c2| c1.total_climb <=> c2.total_climb }
+    return most_climb.last()
+  end
 
 end

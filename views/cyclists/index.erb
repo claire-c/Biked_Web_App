@@ -1,7 +1,17 @@
 
-<h1>All cyclists</h1>
+
 <p><a href="/cyclists/new">Add cyclist</a></p>
 
+<h1>Cyclists' Leaderboard!</h1>
+<p>Most miles: <%= Cyclist.most_miles().name %> with a whopping <%= Cyclist.most_miles().total_miles %> miles clocked up.</p>
+
+<p>Most climb: <%= Cyclist.most_climb().name %> with <%= Cyclist.most_climb().total_climb %> feet to their name.</p>
+
+<p>Most rides: 
+<p>
+<hr>
+<h1>All cyclists</h1>
+<p>
 <% @cyclists.each do |cyclist|  %>
   <p>Name: <%= cyclist.name() %></p>
   <p>Total routes cycled: <%= cyclist.total_routes() %> </p>

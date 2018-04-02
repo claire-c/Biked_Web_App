@@ -27,4 +27,5 @@ ride = Ride.find(1)
 # p ride.completion_time()
 
 #p ConvertTime.convert(route.average_time())
-p Ride.ordered()
+#p Ride.ordered()
+p Cyclist.most_climb()

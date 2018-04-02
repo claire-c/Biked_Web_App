@@ -5,6 +5,7 @@
 <% @rides.each do |ride|  %>
   <p>Logged by: <%= ride.get_cyclist.name() %></p>
   <p>Route cycled: <%= ride.get_route.title() %> </p>
+  <p>Date logged: <%= ride.date_logged() %></p>
   <p><a href="/rides/<%= ride.id %>">Go to ride</a></p>
   <hr/>
 <% end %>
