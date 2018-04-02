@@ -5,7 +5,10 @@
 <p>Distance: <%= @route.distance() %>
 <p>Elevation: <%= @route.elevation()%></p>
 <p>Logged cycles: <%= @route.total_cyclists()%></p>
-
+<p>Cycled by: </p>
+  <p><% @cyclists.each do |cyclist| %>
+  <%= cyclist.name %></p>
+  <% end %>
 
 
 

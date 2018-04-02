@@ -44,5 +44,6 @@ end
 #show individual route
 get "/routes/:id" do
   @route = Route.find(params[:id].to_i)
+  @cyclists = @route.cyclists()
   erb(:"routes/show")
 end
