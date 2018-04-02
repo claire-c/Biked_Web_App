@@ -5,7 +5,7 @@ require_relative('../models/ride.rb')
 
 #show all rides
 get	"/rides" do
-  @rides = Ride.all()
+  @rides = Ride.ordered()
   erb(:"rides/index")
 end
 
