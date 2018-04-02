@@ -14,8 +14,11 @@
 <p>
 
 
+  <p></p>
+    <form method="get" action="/cyclists/<%= @cyclist.id %>/edit">
+    <input type="submit" value="Edit profile" />
+  </form><p></p>
 
-<p><a href="/cyclists/<%= @cyclist.id %>/edit">Edit <%= @cyclist.name() %>'s profile</a></p>
 
 <form method="post" action="/cyclists/<%= @cyclist.id %>/delete">
      <input type="submit" value="Delete Profile" />

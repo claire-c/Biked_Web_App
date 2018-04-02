@@ -12,7 +12,10 @@
 
 
 
-<p><a href="/routes/<%= @route.id %>/edit">Edit route</a></p>
+    <p></p>
+      <form method="get" action="/routes/<%= @route.id %>/edit">
+      <input type="submit" value="Edit route" />
+    </form><p></p>
 
 <form method="post" action="/routes/<%= @route.id %>/delete">
      <input type="submit" value="Delete route" />

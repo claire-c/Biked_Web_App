@@ -2,14 +2,19 @@
 
 
 <p>Cycled by: <%= @ride.get_cyclist.name %>
+<p>Date logged: <%= @ride.date_logged %>
 <p>Route: <%= @ride.get_route().title %>
 <p>Miles: <%= @ride.get_route().distance %><p>
 <p>Elevation: <%= @ride.get_route().elevation %></p>
+<p>Completion time: <%= @ride.completion_time() %></p>
 
 
 
+<p></p>
+  <form method="get" action="/rides/<%= @ride.id %>/edit">
+  <input type="submit" value="Edit ride" />
+</form><p></p>
 
-<p><a href="/rides/<%= @ride.id %>/edit">Edit ride</a></p>
 
 <form method="post" action="/rides/<%= @ride.id %>/delete">
      <input type="submit" value="Delete ride" />
