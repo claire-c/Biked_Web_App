@@ -26,6 +26,8 @@ end
 #get form to edit existing ride
 get "/rides/:id/edit" do
   @ride = Ride.find(params[:id].to_i)
+  @cyclists = Cyclist.all()
+  @routes = Route.all()
   erb(:"rides/edit")
 end
 
