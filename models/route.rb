@@ -98,7 +98,7 @@ class Route
   end
 
 #Sort cyclists' times from quickest to slowest. Returns array of ride objects.
-  def time_leaderboard()
+  def leaderboard()
     rides = all_rides()
     leaderboard = rides.sort{ |ride| ride.completion_time() }
     return leaderboard
