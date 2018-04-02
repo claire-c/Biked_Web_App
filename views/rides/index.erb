@@ -1,5 +1,6 @@
 
 <h1>All logged rides</h1>
+<a href="/rides/new">Add a new ride!</a></p>
 
 <% @rides.each do |ride|  %>
   <p>Logged by: <%= ride.get_cyclist.name() %></p>
