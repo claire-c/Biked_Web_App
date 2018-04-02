@@ -3,11 +3,13 @@
 <p><a href="/cyclists/new">Add cyclist</a></p>
 
 <h1>Cyclists' Leaderboard!</h1>
-<p>Most miles: <%= Cyclist.most_miles().name %> with a whopping <%= Cyclist.most_miles().total_miles %> miles clocked up.</p>
+<p>Most miles:
+<%= Cyclist.most_miles().first.name %> with a whopping <%= Cyclist.most_miles().first.total_miles %> miles clocked up.</p>
 
-<p>Most climb: <%= Cyclist.most_climb().name %> with <%= Cyclist.most_climb().total_climb %> feet to their name.</p>
+<p>Most climb:
+<%= Cyclist.most_climb().first.name %> with <%= Cyclist.most_climb().first.total_climb %> feet to their name.</p>
 
-<p>Most rides: <%= Cyclist.most_rides().name %> with <%= Cyclist.most_rides().total_routes %> routes checked off.</p>
+<p>Most rides: <%= Cyclist.most_rides().first.name %> with <%= Cyclist.most_rides().first.total_routes %> routes checked off.</p>
 <p>
 <hr>
 <h1>All cyclists</h1>

@@ -2,6 +2,7 @@ require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
 require_relative('../models/route.rb')
+require_relative('../models/convert_time.rb')
 
 #show all routes
 get	"/routes" do

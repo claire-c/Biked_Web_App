@@ -5,10 +5,21 @@
 <p>Distance: <%= @route.distance() %>
 <p>Elevation: <%= @route.elevation()%></p>
 <p>Logged cycles: <%= @route.total_cyclists()%></p>
+<p>Average ride time: <%= ConvertTime.hours(@route.average_time) %> hours OR <%= ConvertTime.days(ConvertTime.hours(@route.average_time)) %> days if you cycle a 7 hour day :)</p>
 <p>Cycled by: </p>
   <p><% @cyclists.each do |cyclist| %>
   <%= cyclist.name %></p>
   <% end %>
+
+<h1>Route Leaderboard</h1>
+<% num = 0 %>
+<% @route.leaderboard.each do |route| %>
+  <%=route.get_cyclist.name + " in" if route != nil && num < 3 %>
+  <%=ConvertTime.hours(route.completion_time).to_s + " hours" if route != nil && num < 3 %>
+  <% num +=1 %>
+  <p>
+<% end %>
+
 
 
 

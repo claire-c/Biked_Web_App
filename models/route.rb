@@ -97,7 +97,7 @@ class Route
     return sum / (all_rides().count)
   end
 
-#Sort cyclists' times from quickest to slowest. Returns array of ride objects.
+#Sort cyclists' times from quickest to slowest for rides on instance of route. Returns array of ride objects.
   def leaderboard()
     rides = all_rides()
     leaderboard = rides.sort{ |ride| ride.completion_time() }

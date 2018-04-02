@@ -96,23 +96,25 @@ class Cyclist
     return titles
   end
 
+#returns an array with cyclist objects, ordered by most miles first.
   def self.most_miles()
     cyclists = Cyclist.all()
     most_miles = cyclists.sort { |c1, c2| c1.total_miles <=> c2.total_miles }
-    return most_miles.last()
+    return most_miles.reverse()
   end
 
-
+#returns an array with cyclist objects, ordered by most rides first.
   def self.most_rides()
     cyclists = Cyclist.all()
     most_rides = cyclists.sort { |c1, c2| c1.total_routes <=> c2.total_routes }
-    return most_rides.last()
+    return most_rides.reverse()
   end
 
+#returns an array with cyclist objects, ordered by most climb first.
   def self.most_climb
     cyclists = Cyclist.all()
     most_climb = cyclists.sort { |c1, c2| c1.total_climb <=> c2.total_climb }
-    return most_climb.last()
+    return most_climb.reverse()
   end
 
 end
