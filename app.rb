@@ -6,5 +6,6 @@ require_relative('controllers/rides_controller')
 require_relative('controllers/routes_controller')
 
 get '/' do
+  @rides = Ride.ordered()
   erb(:index)
 end

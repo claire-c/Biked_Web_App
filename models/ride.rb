@@ -78,7 +78,7 @@ class Ride
 #list all rides in date order from newest to oldest.
   def self.ordered()
     all_rides = Ride.all()
-    date_order = all_rides.sort {|ride| ride.date_logged}
+    date_order = all_rides.sort {|r1, r2| r1.date_logged <=> r2.date_logged}
     return date_order.reverse
   end
 

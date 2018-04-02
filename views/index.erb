@@ -1,1 +1,9 @@
 <h1>Welcome!</h1>
+
+<h2>Latest Rides</h2>
+<% @rides.each do |ride| %>
+<%= ride.get_cyclist().name %></p>
+<p><%= ride.get_route().title %></p>
+<p><%= ride.date_logged %></p>
+<hr>
+<% end %>
