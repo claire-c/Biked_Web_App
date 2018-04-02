@@ -66,36 +66,48 @@ arthurs_seat.save()
 
 ride1 = Ride.new({
   'route_id' => arran.id,
-  'cyclist_id' => suzanne.id
+  'cyclist_id' => suzanne.id,
+  'date_logged' =>'2018-03-18',
+  'completion_time' => '480'
   })
 ride1.save()
 
 ride2 = Ride.new({
   'route_id' => arran.id,
-  'cyclist_id' => claire.id
+  'cyclist_id' => claire.id,
+  'date_logged' =>'2017-04-28',
+  'completion_time' => '400'
   })
   ride2.save()
 
 ride3 = Ride.new({
   'route_id' => north_coast.id,
-  'cyclist_id' => joe.id
+  'cyclist_id' => joe.id,
+  'date_logged' =>'2018-02-01',
+  'completion_time' => '2880'
   })
 ride3.save()
 
 ride4 = Ride.new({
   'route_id' => arthurs_seat.id,
   'cyclist_id' => tara.id,
+  'date_logged' =>'2018-01-01',
+  'completion_time' => '35'
   })
   ride4.save()
 
 ride5 = Ride.new({
   'route_id' => castles.id,
   'cyclist_id' => suzanne.id,
+  'date_logged' =>'2016-08-08',
+  'completion_time' => '4000'
   })
 ride5.save
 
 ride6 = Ride.new({
   'route_id' => lochs.id,
   'cyclist_id' => louie.id,
+  'date_logged' =>'2011-07-05',
+  'completion_time' => '2160'
   })
 ride6.save()

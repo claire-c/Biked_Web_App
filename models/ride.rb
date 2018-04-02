@@ -2,16 +2,21 @@ require('pry')
 require_relative('../db/sql_runner.rb')
 require_relative('route.rb')
 require_relative('cyclist.rb')
+require 'date'
 
 class Ride
 
   attr_reader :id
-  attr_accessor :route_id, :cyclist_id
+  attr_accessor :route_id, :cyclist_id, :completion_time, :date_logged
 
   def initialize(hash)
     @id = hash['id'].to_i if hash['id']
     @cyclist_id = hash['cyclist_id'].to_i
     @route_id = hash['route_id'].to_i
+    date_to_parse = hash['date_logged']
+    @date_logged = Date.parse(date_to_parse)
+    @completion_time = hash['completion_time'].to_i
+
   end
 
   def self.delete_all()
@@ -36,22 +41,22 @@ class Ride
 
   def save()
     sql = "INSERT INTO rides
-            (cyclist_id, route_id)
+            (cyclist_id, route_id, date_logged, completion_time)
             VALUES
-            ($1, $2)
+            ($1, $2, $3, $4)
             RETURNING id;"
-    values = [@cyclist_id, @route_id]
+    values = [@cyclist_id, @route_id, @date_logged, @completion_time]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id'].to_i
   end
 
   def update()
     sql = "UPDATE rides SET
-            (cyclist_id, route_id)
+            (cyclist_id, route_id, date_logged, completion_time)
             =
-            ($1, $2)
-            WHERE id = $3;"
-    values = [@cyclist_id, @route_id, @id]
+            ($1, $2, $3, $4)
+            WHERE id = $5;"
+    values = [@cyclist_id, @route_id, @date_logged, @completion_time, @id]
     SqlRunner.run(sql, values)
   end
 

@@ -21,4 +21,6 @@ ride = Ride.find(1)
 
 p cyclist
 
-p ride.get_cyclist().name
+p ride.date_logged()
+
+p ride.completion_time()

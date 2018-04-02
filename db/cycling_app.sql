@@ -18,5 +18,7 @@ elevation INT
 CREATE TABLE rides(
 id SERIAL4 PRIMARY KEY,
 cyclist_id INT4 REFERENCES cyclists(id),
-route_id INT4 REFERENCES routes(id)
+route_id INT4 REFERENCES routes(id),
+date_logged DATE,
+completion_time INT
 );
