@@ -2,6 +2,7 @@ require('pry')
 require_relative('cyclist.rb')
 require_relative('ride.rb')
 require_relative('route.rb')
+require_relative('convert_time.rb')
 
 
 cyclist = Cyclist.find(4)
@@ -25,4 +26,4 @@ ride = Ride.find(1)
 #
 # p ride.completion_time()
 
-p route.time_leaderboard()
+p ConvertTime.convert(route.average_time())
