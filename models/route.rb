@@ -80,14 +80,26 @@ class Route
     cyclists().length
   end
 
+#All rides that have been logged against the route.
+  def all_rides()
+    sql = "SELECT * FROM rides
+            WHERE rides.route_id = $1"
+    values = [@id]
+    rides_array = SqlRunner.run(sql, values)
+    all_rides = rides_array.map { |ride| Ride.new(ride)}
+    return all_rides
+  end
+
 #average time to complete a route.
   def average_time()
 
   end
 
-#Sort cyclists' times from quickest to slowest
+#Sort cyclists' times from quickest to slowest. Returns array of ride objects.
   def time_leaderboard()
-
+    rides = all_rides()
+    leaderboard = rides.sort{ |ride| ride.completion_time() }
+    return leaderboard
   end
 
 end

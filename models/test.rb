@@ -25,4 +25,4 @@ ride = Ride.find(1)
 #
 # p ride.completion_time()
 
-p Ride.ordered()
+p route.time_leaderboard()
