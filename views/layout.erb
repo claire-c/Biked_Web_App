@@ -3,15 +3,18 @@
   <head>
     <meta charset="utf-8">
     <title>Biked</title>
-      <link rel="stylesheet" type="text/css" href="/style.css">
+      <link rel="stylesheet" type="text/css" href="/styles/style.css">
   </head>
   <body>
-<nav>
-  <p><a href="/">Home</a><p>
-  <p><a href="/cyclists">All cyclists</a></p>
-  <p><a href="/routes">All routes</a></p>
-  <p><a href="/rides">All rides</a></p>
-</nav>
+  <div class="navbar">
+    <div class="nav item1"><a href="/">Home</a></div>
+    <div class="nav item2"><a href="/cyclists/new">Join</a></div>
+    <div class="nav item3"><a href="/rides/new">Add ride</a></div>
+    <div class="nav item4"><a href="/routes/new">Add route</a></div>
+    <div class="nav item5"><a href="/cyclists">Cyclists</a></div>
+    <div class="nav item6"><a href="/routes">Routes</a></div>
+    <div class="nav item7"><a href="/rides">Rides</a></div>
+  </div>
 
 <%= yield %>
 
