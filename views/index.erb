@@ -3,23 +3,35 @@
   <h1>Welcome to Biked</h1>
 </div>
 
-<div class="front_page">
+<div class="grid">
 
-  <div class="route_highlights">
-    <div class="route headline"><h1>Route Highlight</h1></div>
-  </div>
-  <div class="route_image"><img src="/images/bicycle.png"></div>
-  <div class="route_copy">Lorem ipsum dolor sit amet, et saepe mediocrem quo, ea quo agam quot. Usu illud forensibus cu, an mel purto tantas partem, eu mutat corpora eos. Cu oratio ancillae sed, mel zril solet eu, dicat nonumy virtute mei et. Ne has nemore aeterno corpora, vis ut epicurei perpetua suavitate.
-/div>
-
-  <div class="latest_rides">
-    <h1>Latest Rides</h1>
-    <% @rides.each do |ride| %>
-      <%= ride.get_cyclist().name %></p>
-      <p><%= ride.get_route().title %></p>
-      <p><%= ride.date_logged %></p>
-      <hr>
-      <% end %>
+  <div class="cell">
+    <div class="route headline">
+      <h1>Route Highlight</h1>
     </div>
-
+    <div class="route image">
+      <img src="/images/bicycle.png">
+    </div>
+    <div class="route copy">
+        Lorem ipsum dolor sit amet, et saepe mediocrem quo, ea quo agam quot. Usu illud forensibus cu, an mel purto tantas partem, eu mutat corpora eos. Cu oratio ancillae sed, mel zril solet eu, dicat nonumy virtute mei et. Ne has nemore aeterno corpora, vis ut epicurei perpetua suavitate.
+    </div>
   </div>
+
+  <div class="cell">
+    <div class="ride headline"><h1>Latest rides</h1></div>
+    <% num = 0 %>
+     <% @rides.each do |ride| %>
+     <div class="ride-box"
+       <br><%= ride.get_cyclist().name %></br>
+       <br><%= ride.get_route().title %></br>
+       <br><%= ride.date_logged %></br>
+       <% num += 1 %>
+       <% break if num == 5 %>
+       <hr>
+     </div>
+       <% end %>
+  </div>
+
+
+
+</div>

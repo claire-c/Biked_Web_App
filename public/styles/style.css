@@ -1,5 +1,7 @@
 div {
   border: 2px solid black;
+  /* font-family: 'EB Garamond', serif;
+  font-size: 1em; */
 }
 
 body {
@@ -24,13 +26,17 @@ h1 {
   padding-left: 10px;
 }
 
+.headline {
+  background: #DEF2F1;
+}
+
 p {
   font-family: 'EB Garamond', serif;
-  font-size: 1em;
+  font-size: 2em;
 }
 
 
-.header_image {
+.header-image {
   background-image: url("/images/header_image.jpg");
   width: 100%;
   height: 200px;
@@ -43,13 +49,24 @@ a {
 
 .flex {
   display: flex;
-}
-
-.flex--row {
   flex-direction: column;
 }
 
-.front_page {
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.cell {
+  width: 500px;
+  padding: 10px;
+  margin: 10px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1em;
+}
+
+.front-page {
   display: flex;
   flex-direction: row;
 }
@@ -61,19 +78,20 @@ a {
   background: #DEF2F1;
 }
 
-.latest_rides {
+.latest-rides {
   display: flex;
   flex-direction: column;
 }
 
-.route_highlights {
+.route {
   display: flex;
   flex-direction: column;
+  font-family: 'EB Garamond', serif;
+  font-size: 1em;
 }
 
-.route_image {
+.image {
   /* background-image: url("/images/bicycle.png"); */
-  width: 100%;
   height: 100px;
 
   /* background-position: 100% 49%; */
@@ -83,5 +101,8 @@ a {
 
 
 footer {
-
+  height: 150px;
+  background-color: #3AAFA9;
+  margin-top: 50px;
+  border: 1px solid rebeccapurple;
 }
