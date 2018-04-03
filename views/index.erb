@@ -1,9 +1,25 @@
-<h1>Welcome!</h1>
 
-<h2>Latest Rides</h2>
-<% @rides.each do |ride| %>
-<%= ride.get_cyclist().name %></p>
-<p><%= ride.get_route().title %></p>
-<p><%= ride.date_logged %></p>
-<hr>
-<% end %>
+<div class="welcome">
+  <h1>Welcome to Biked</h1>
+</div>
+
+<div class="front_page">
+
+  <div class="route_highlights">
+    <div class="route headline"><h1>Route Highlight</h1></div>
+  </div>
+  <div class="route_image"><img src="/images/bicycle.png"></div>
+  <div class="route_copy">Lorem ipsum dolor sit amet, et saepe mediocrem quo, ea quo agam quot. Usu illud forensibus cu, an mel purto tantas partem, eu mutat corpora eos. Cu oratio ancillae sed, mel zril solet eu, dicat nonumy virtute mei et. Ne has nemore aeterno corpora, vis ut epicurei perpetua suavitate.
+/div>
+
+  <div class="latest_rides">
+    <h1>Latest Rides</h1>
+    <% @rides.each do |ride| %>
+      <%= ride.get_cyclist().name %></p>
+      <p><%= ride.get_route().title %></p>
+      <p><%= ride.date_logged %></p>
+      <hr>
+      <% end %>
+    </div>
+
+  </div>

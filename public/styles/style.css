@@ -1,13 +1,34 @@
+div {
+  border: 2px solid black;
+}
+
+body {
+  margin: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
-  background: white;
+  background: #3AAFA9;
   color: black;
   font-size: 1.5em;
   text-align: center;
   padding: 10px;
-
+  font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  background: #DEF2F1;
+  padding-left: 10px;
+}
+
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: 1em;
+}
+
 
 .header_image {
   background-image: url("/images/header_image.jpg");
@@ -18,4 +39,49 @@
 
 a {
   text-decoration: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: column;
+}
+
+.front_page {
+  display: flex;
+  flex-direction: row;
+}
+
+/* index.erb divs */
+.welcome {
+  display: flex;
+  flex-direction: row;
+  background: #DEF2F1;
+}
+
+.latest_rides {
+  display: flex;
+  flex-direction: column;
+}
+
+.route_highlights {
+  display: flex;
+  flex-direction: column;
+}
+
+.route_image {
+  /* background-image: url("/images/bicycle.png"); */
+  width: 100%;
+  height: 100px;
+
+  /* background-position: 100% 49%; */
+}
+
+
+
+
+footer {
+
 }
