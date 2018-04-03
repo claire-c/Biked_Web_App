@@ -9,6 +9,13 @@
 
 }
 
-a { text-decoration: none;
+.header_image {
+  background-image: url("/images/header_image.jpg");
+  width: 100%;
+  height: 200px;
+  background-position: 0% 49%;
+}
 
+a {
+  text-decoration: none;
 }
