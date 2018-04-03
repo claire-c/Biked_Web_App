@@ -1,5 +1,5 @@
 div {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   /* font-family: 'EB Garamond', serif;
   font-size: 1em; */
 }
@@ -26,9 +26,9 @@ h1 {
   padding-left: 10px;
 }
 
-.headline {
+/* .headline {
   background: #DEF2F1;
-}
+} */
 
 p {
   font-family: 'EB Garamond', serif;
@@ -90,10 +90,20 @@ a {
   font-size: 1em;
 }
 
+.copy {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5em;
+}
+
+.ride-box {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.5em;
+}
+
 .image {
   /* background-image: url("/images/bicycle.png"); */
-  height: 100px;
-
+  /* height: 100px; */
+  width: 100%;
   /* background-position: 100% 49%; */
 }
 
@@ -104,5 +114,4 @@ footer {
   height: 150px;
   background-color: #3AAFA9;
   margin-top: 50px;
-  border: 1px solid rebeccapurple;
 }
