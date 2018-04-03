@@ -104,4 +104,21 @@ class Route
     return leaderboard
   end
 
+  def self.most_popular()
+    popular = all().sort { |route1, route2|
+    route1.total_cyclists <=> route2.total_cyclists }
+    return popular.last()
+  end
+
+  def self.longest()
+    distances = all().sort { |route1, route2| route1.distance <=> route2.distance }
+    return distances.last()
+  end
+
+  def self.highest()
+    highest = all().sort { |route1, route2| route1.elevation <=> route2.elevation }
+    return highest.last()
+  end
+
+
 end

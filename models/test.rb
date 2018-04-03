@@ -23,3 +23,7 @@ ride = Ride.find(1)
 #p Cyclist.most_climb().first.name
 
 p route.leaderboard()[1].get_cyclist.name
+
+p Route.longest()
+p Route.most_popular()
+p Route.highest()
