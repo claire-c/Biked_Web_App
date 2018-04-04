@@ -1,11 +1,18 @@
+<div class="welcome">
+  <h1>All rides</h1>
+</div>
 
-<h1>All logged rides</h1>
-<a href="/rides/new">Add a new ride!</a></p>
+<div class="list">
 
-<% @rides.each do |ride|  %>
-  <p>Logged by: <%= ride.get_cyclist.name() %></p>
-  <p>Route cycled: <%= ride.get_route.title() %> </p>
-  <p>Date logged: <%= ride.date_logged() %></p>
-  <p><a href="/rides/<%= ride.id %>">Go to ride</a></p>
-  <hr/>
-<% end %>
+    <div class="items">
+  <% @rides.each do |ride|  %>
+    <div class="items-box">
+    <div class="stats-cell"><%= ride.get_cyclist.name() %></div>
+    <div class="stats-cell"><%= ride.get_route.title() %></div>
+    <div class="stats-cell"><%= ride.date_logged() %></div>
+    <a href="/rides/<%= ride.id %>"><button>Go to ride</button></a>
+  </div>
+  <% end %>
+    </div>
+
+</div>
