@@ -9,4 +9,13 @@ def self.random()
 return images.sample()
 end
 
+def self.profile()
+  images = [
+    "/images/claire.jpg",
+    "/images/female.jpg",
+    "/images/male.jpg"
+  ]
+return images.sample()
+end
+
 end

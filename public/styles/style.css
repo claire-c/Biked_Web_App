@@ -23,7 +23,7 @@ button {
   color: white;
   padding: 16px 32px;
   text-decoration: none;
-  margin: 20px;
+  margin-top: 20px;
   cursor: pointer;
   font-family: 'Roboto', sans-serif;
   font-size: 1.25em;
@@ -178,6 +178,7 @@ select {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .cell {
@@ -215,6 +216,8 @@ select {
 .copy {
   font-family: 'EB Garamond', serif;
   font-size: 1.5em;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .ride-box {
@@ -223,10 +226,23 @@ select {
 }
 
 .image {
-  width: 100%;
+  width: 500px;
   display: flex;
   flex-direction: row;
 }
+
+/* Cyclist profile divs */
+
+.statistics-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats-cell {
+  display: flex;
+  flex-direction: row;
+}
+
 
 /* footer divs  */
 

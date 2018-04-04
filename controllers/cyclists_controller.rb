@@ -3,6 +3,7 @@ require( 'sinatra/contrib/all' )
 require( 'pry' )
 require_relative('../models/cyclist.rb')
 
+
 #show all cyclists
 get	"/cyclists" do
   @cyclists = Cyclist.all()
