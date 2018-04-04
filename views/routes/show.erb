@@ -23,7 +23,7 @@
       </div>
 
       <div class="edit">
-        <form method="post" action="/route/<%= @route.id %>/delete">
+        <form method="post" action="/routes/<%= @route.id %>/delete">
           <input type="submit" value="Delete Route" />
         </form>
       </div>
@@ -40,6 +40,11 @@
         </div>
         <div class="stats-cell">
           Total elevation: <%= @route.elevation() %> feet
+        </div>
+        <div class="stats-cell">
+          Average cycle time:
+          <% ConvertTime.hours(@route.average_time) %>
+          <%= ConvertTime.days(ConvertTime.hours(@route.average_time)) %> days (7 hr day)
         </div>
         <div class="stats-cell">
           Total logged rides: <%= @route.total_cyclists() %>

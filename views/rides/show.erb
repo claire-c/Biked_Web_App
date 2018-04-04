@@ -1,21 +1,53 @@
-<h1>See Ride Details</h1>
+<div class="welcome"><h1>Ride details</h1></div>
+
+<div class="grid">
+
+  <div class="cell">
+    <h1>About this ride</h1>
+
+    <div class="stats-cell">
+      Cycled by: <%= @ride.get_cyclist.name %>
+    </div>
+
+    <div class="stats-cell">
+      Date logged: <%= @ride.date_logged %>
+    </div>
+
+    <div class="stats-cell">
+      Route: <%= @ride.get_route().title %>
+    </div>
+
+    <div class="stats-cell">
+      Distance: <%= @ride.get_route().distance %>
+    </div>
+
+    <div class="stats-cell">
+    Elevation: <%= @ride.get_route().elevation %>
+    </div>
+
+    <div class="stats-cell">
+    Completion time: <%= @ride.completion_time() %>
+    </div>
+
+    <div class="buttons">
+      <div class="edit">
+        <form method="get" action="/rides/<%= @ride.id %>/edit">
+          <input type="submit" value="Edit ride" />
+        </form>
+      </div>
+
+      <div class="edit">
+        <form method="post" action="/rides/<%= @ride.id %>/delete">
+          <input type="submit" value="Delete ride" />
+        </form>
+      </div>
+
+    </div>
+
+  </div>
 
 
-<p>Cycled by: <%= @ride.get_cyclist.name %>
-<p>Date logged: <%= @ride.date_logged %>
-<p>Route: <%= @ride.get_route().title %>
-<p>Miles: <%= @ride.get_route().distance %><p>
-<p>Elevation: <%= @ride.get_route().elevation %></p>
-<p>Completion time: <%= @ride.completion_time() %></p>
 
 
 
-<p></p>
-  <form method="get" action="/rides/<%= @ride.id %>/edit">
-  <input type="submit" value="Edit ride" />
-</form><p></p>
-
-
-<form method="post" action="/rides/<%= @ride.id %>/delete">
-     <input type="submit" value="Delete ride" />
-   </form>
+</div>

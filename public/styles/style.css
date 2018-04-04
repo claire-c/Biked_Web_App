@@ -248,7 +248,7 @@ select {
   font-size: 2em;
 }
 
-.stats-cell-loop {
+/* .stats-cell-loop {
   text-indent: 20px;
   display: flex;
   flex-direction: row;
@@ -257,7 +257,7 @@ select {
   margin-bottom: 20px;
   font-family: 'EB Garamond', serif;
   font-size: 2em;
-}
+} */
 
 .buttons  {
   align-items: center;
