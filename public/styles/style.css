@@ -1,7 +1,7 @@
 /* structure of website */
 
 div {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   /* font-family: 'EB Garamond', serif;
   font-size: 1em; */
 }
@@ -103,6 +103,13 @@ footer {
 .form {
   display: flex;
   justify-content: center;
+}
+
+.buttons  {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 form {
@@ -264,22 +271,36 @@ select {
   font-family: 'EB Garamond', serif;
   font-size: 1.5em;
   line-height: 50px;
+  text-indent: 10px;
 }
 
-/* .stats-cell-loop {
-  text-indent: 20px;
+/* All cyclist-ride-route view */
+
+.items {
   display: flex;
   flex-direction: row;
-  background: #A8D0E6;
-  height: 50px;
-  margin-bottom: 20px;
-  font-family: 'EB Garamond', serif;
-  font-size: 2em;
-} */
-
-.buttons  {
-  align-items: center;
-  justify-content: center;
-  display: flex;
   flex-wrap: wrap;
+  padding: 20px;
+  justify-content: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  /* padding: 10px; */
+}
+
+.items-box {
+
+  padding: 10px;
+  margin: 20px;
+  width: 300px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25em;
+  border: 2px solid #3AAFA9;
+}
+
+.box-image {
+  justify-content: center;
+
 }

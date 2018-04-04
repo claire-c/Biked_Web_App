@@ -1,23 +1,17 @@
+<div class="welcome">
+  <h1>All cyclists</h1>
+</div>
 
+<div class="list">
 
-<p><a href="/cyclists/new">Add cyclist</a></p>
+    <div class="items">
+  <% @cyclists.each do |cyclist|  %>
+    <div class="items-box">
+    <div class="stats-cell"><%= cyclist.name() %></div>
+    <div class="box-image"> <img src="/images/bicycle.png"></div>
+    <a href="/cyclists/<%= cyclist.id %>"><button>Go to profile</button></a>
+  </div>
+  <% end %>
+    </div>
 
-<h1>Cyclists' Leaderboard!</h1>
-<p>Most miles:
-<%= Cyclist.most_miles().first.name %> with a whopping <%= Cyclist.most_miles().first.total_miles %> miles clocked up.</p>
-
-<p>Most climb:
-<%= Cyclist.most_climb().first.name %> with <%= Cyclist.most_climb().first.total_climb %> feet to their name.</p>
-
-<p>Most rides: <%= Cyclist.most_rides().first.name %> with <%= Cyclist.most_rides().first.total_routes %> routes checked off.</p>
-<p>
-<hr>
-<h1>All cyclists</h1>
-<p>
-<% @cyclists.each do |cyclist|  %>
-  <p>Name: <%= cyclist.name() %></p>
-  <p>Total routes cycled: <%= cyclist.total_routes() %> </p>
-  <p><a href="/cyclists/<%= cyclist.id %>">Go to profile</a></p>
-  <p></p>
-  <hr/>
-<% end %>
+</div>
