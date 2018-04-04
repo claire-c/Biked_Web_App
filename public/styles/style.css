@@ -91,7 +91,7 @@ footer {
 form {
   /* background: purple; */
   font-family: 'Roboto', sans-serif;
-  padding: 25px;
+  /* padding: 25px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -241,6 +241,18 @@ select {
 .stats-cell {
   display: flex;
   flex-direction: row;
+}
+
+.edit  {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.delete  {
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 
