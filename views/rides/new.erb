@@ -3,22 +3,22 @@
 <div class="form">
 <form action="/rides" method="post">
   <label>
-  Select a cyclist:
+  Select a cyclist:</label>
     <select name="cyclist_id">
       <% for cyclist in @cyclists %>
       <option value="<%= cyclist.id %>"><%= cyclist.name %></option>
       <% end %>
     </select>
-  </label>
+
 
   <label>
-    Select a route:
+    Select a route:</label>
     <select name="route_id">
       <% for route in @routes %>
       <option value="<%= route.id %>"><%= route.title %></option>
       <% end %>
     </select>
-  </label>
+
 
   <label for ="date-logged">Date logged:</label>
   <input id="date-logged" type="date" name="date_logged" />
