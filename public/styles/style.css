@@ -1,5 +1,7 @@
+/* structure of website */
+
 div {
-  /* border: 2px solid black; */
+  border: 2px solid black;
   /* font-family: 'EB Garamond', serif;
   font-size: 1em; */
 }
@@ -7,6 +9,38 @@ div {
 body {
   margin: 0;
 }
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2em;
+  background: #DEF2F1;
+  padding-left: 10px;
+}
+
+
+p {
+  font-family: 'EB Garamond', serif;
+  font-size: 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  height: 150px;
+  background-color: #3AAFA9;
+  color: #DEF2F1;
+  margin-top: 50px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25em;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+/* navigation */
 
 .navbar {
   display: flex;
@@ -17,24 +51,8 @@ body {
   text-align: center;
   padding: 10px;
   font-family: 'Roboto', sans-serif;
+  color: #DEF2F1;
 }
-
-h1 {
-  font-family: 'Roboto', sans-serif;
-  font-size: 2em;
-  background: #DEF2F1;
-  padding-left: 10px;
-}
-
-/* .headline {
-  background: #DEF2F1;
-} */
-
-p {
-  font-family: 'EB Garamond', serif;
-  font-size: 2em;
-}
-
 
 .header-image {
   background-image: url("/images/header_image.jpg");
@@ -43,9 +61,7 @@ p {
   background-position: 0% 49%;
 }
 
-a {
-  text-decoration: none;
-}
+/* Main box for templates to be inserted */
 
 .flex {
   display: flex;
@@ -66,10 +82,10 @@ a {
   font-size: 1em;
 }
 
-.front-page {
+/* .front-page {
   display: flex;
   flex-direction: row;
-}
+} */
 
 /* index.erb divs */
 .welcome {
@@ -78,10 +94,10 @@ a {
   background: #DEF2F1;
 }
 
-.latest-rides {
+/* .latest-rides {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .route {
   display: flex;
@@ -101,17 +117,26 @@ a {
 }
 
 .image {
-  /* background-image: url("/images/bicycle.png"); */
-  /* height: 100px; */
   width: 100%;
-  /* background-position: 100% 49%; */
+  display: flex;
+  flex-direction: row;
 }
 
+/* footer divs  */
 
+/* .contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: auto;
+} */
 
-
-footer {
-  height: 150px;
-  background-color: #3AAFA9;
-  margin-top: 50px;
+.contact {
+  /* width: 500px; */
+  padding: 10px;
+  margin: 10px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1em;
 }
