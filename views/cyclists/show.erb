@@ -3,7 +3,7 @@
 <div class="grid">
 
   <div class="cell">
-    <h1>Profile info!</h1>
+    <h1>About this cyclist</h1>
 
     <div class="image">
       <img src="<%= ImageCarousel.profile() %>">
@@ -12,7 +12,7 @@
     <div class="copy">
       Here is some profile information about this cyclist and what they like to do.
       <br>
-      Lorem ipsum dolor sit amet, et saepe mediocrem quo, ea quo agam quot. Usu illud forensibus cu, an mel purto tantas partem, eu mutat corpora eos. Cu oratio ancillae sed, mel zril solet eu, dicat nonumy virtute mei et. Ne has nemore aeterno corpora, vis ut epicurei perpetua suavitate.</br>
+      Lorem ipsum dolor sit amet, et saepe mediocrem quo, ea quo agam quot. </br>
     </div>
 
     <div class="buttons">
@@ -22,7 +22,7 @@
         </form>
       </div>
 
-      <div class="delete">
+      <div class="edit">
         <form method="post" action="/cyclists/<%= @cyclist.id %>/delete">
           <input type="submit" value="Delete Profile" />
         </form>
@@ -30,30 +30,25 @@
 
   </div>
 
-  </div>
+    </div>
 
   <div class="cell">
-      <h1>Stats info!</h1>
-        <div class="stats-cell">Miles here</div>
-        <div class="stats-cell">Elevation here</div>
-        <div class="stats-cell">Total cycles here</div>
-        <div class="stats-cell">Routes cycled here</div>
+      <h1>Stats galore</h1>
+
+        <div class="stats-cell">
+          Total miles: <%= @cyclist.total_miles() %>
+        </div>
+        <div class="stats-cell">
+          Total elevation: <%= @cyclist.total_climb() %> feet
+        </div>
+        <div class="stats-cell">
+          Total logged rides: <%= @cyclist.total_routes() %>
+        </div>
+        <div class="buttons">
+          <form method="get" action="/rides/new">
+            <input type="submit" value="Add a new ride" />
+          </form>
+        </div>
   </div>
 
 </div>
-
-<a href="/rides/new">Add a new ride!</a></p>
-
-<p>Stats:</p>
-<p>Total rides completed: <%= @cyclist.total_routes() %></p>
-<p>Route titles:</p>
-<p><% @routes.each do |route| %>
-<%= route %></p>
-<% end %>
-<p>Total miles cycled: <%= @cyclist.total_miles() %><p>
-<p>Total feet climbed: <%= @cyclist.total_climb() %></p>
-<p>
-
-
-  <p></p>
-    <p></p>
