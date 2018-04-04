@@ -1,7 +1,7 @@
 /* structure of website */
 
 div {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   /* font-family: 'EB Garamond', serif;
   font-size: 1em; */
 }
@@ -38,6 +38,7 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 /* navigation */
@@ -133,10 +134,18 @@ footer {
   margin: auto;
 } */
 
+.footer-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .contact {
   /* width: 500px; */
   padding: 10px;
   margin: 10px;
   font-family: 'EB Garamond', serif;
   font-size: 1em;
+  align-items: center;
 }
