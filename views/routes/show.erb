@@ -1,33 +1,54 @@
-<h1>Route Information</h1>
+<div class="welcome"><h1><%= @route.title %></h1></div>
 
+<div class="grid">
 
-<p>Title: <%= @route.title() %>
-<p>Distance: <%= @route.distance() %>
-<p>Elevation: <%= @route.elevation()%></p>
-<p>Logged cycles: <%= @route.total_cyclists()%></p>
-<p>Average ride time: <%= ConvertTime.hours(@route.average_time) %> hours OR <%= ConvertTime.days(ConvertTime.hours(@route.average_time)) %> days if you cycle a 7 hour day :)</p>
-<p>Cycled by: </p>
-  <p><% @cyclists.each do |cyclist| %>
-  <%= cyclist.name %></p>
-  <% end %>
+  <div class="cell">
+    <h1>About this route</h1>
 
-<h1>Route Leaderboard</h1>
-<% num = 0 %>
-<% @route.leaderboard.each do |route| %>
-  <%=route.get_cyclist.name + " in" if route != nil && num < 3 %>
-  <%=ConvertTime.hours(route.completion_time).to_s + " hours" if route != nil && num < 3 %>
-  <% num +=1 %>
-  <p>
-<% end %>
+    <div class="image">
+      <img src="<%= ImageCarousel.random() %>">
+    </div>
 
+    <div class="copy">
+      Here is some information about this route and where it goes etc.
+      <br>
+      Lorem ipsum dolor sit amet, et saepe mediocrem quo, ea quo agam quot. </br>
+    </div>
 
+    <div class="buttons">
+      <div class="edit">
+        <form method="get" action="/routes/<%= @route.id %>/edit">
+          <input type="submit" value="Edit route" />
+        </form>
+      </div>
 
+      <div class="edit">
+        <form method="post" action="/route/<%= @route.id %>/delete">
+          <input type="submit" value="Delete Route" />
+        </form>
+      </div>
 
-    <p></p>
-      <form method="get" action="/routes/<%= @route.id %>/edit">
-      <input type="submit" value="Edit route" />
-    </form><p></p>
+  </div>
 
-<form method="post" action="/routes/<%= @route.id %>/delete">
-     <input type="submit" value="Delete route" />
-   </form>
+    </div>
+
+  <div class="cell">
+      <h1>Stats at a glance</h1>
+
+        <div class="stats-cell">
+          Route distance: <%= @route.distance() %> miles
+        </div>
+        <div class="stats-cell">
+          Total elevation: <%= @route.elevation() %> feet
+        </div>
+        <div class="stats-cell">
+          Total logged rides: <%= @route.total_cyclists() %>
+        </div>
+        <div class="buttons">
+          <form method="get" action="/rides/new">
+            <input type="submit" value="Add a new ride" />
+          </form>
+        </div>
+  </div>
+
+</div>
