@@ -1,10 +1,6 @@
-/* structure of website */
 
-div {
-  /* border: 2px solid black; */
-  /* font-family: 'EB Garamond', serif;
-  font-size: 1em; */
-}
+
+/* ------------- structure of website ------------- */
 
 body {
   margin: 0;
@@ -54,21 +50,8 @@ a:visited {
   color: #33266E;
 }
 
-footer {
-  height: 150px;
-  background-color: #3AAFA9;
-  color: #DEF2F1;
-  margin-top: 50px;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.25em;
-  padding: 50px;
-  text-align: center;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
-/* footer divs  */
+/*-------------- footer divs --------------*/
 
 .footer-grid {
   display: flex;
@@ -85,93 +68,22 @@ footer {
   align-items: center;
 }
 
-/* navigation */
-
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  background: #3AAFA9;
-  color: black;
-  font-size: 1.5em;
-  text-align: center;
-  padding: 10px;
-  font-family: 'Roboto', sans-serif;
+footer {
+  height: 150px;
+  background-color: #3AAFA9;
   color: #DEF2F1;
-
-}
-
-.navbar a {
-  color: white;
-}
-
-.navbar a:hover {
-  color: black;
-}
-
-.nav {
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 10px;
-}
-
-/* Style The Dropdown Button */
-.dropbtn {
-    background-color: #3AAFA9;
-    color: white;
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1em;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover {
-  color: black;
-  /* background-color: #3AAFA9; */
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #FFFFFF;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-/* Change colour of dropdown links on hover */
-.dropdown-content a:hover {background-color: #DEF2F1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #3AAFA9;
+  margin-top: 50px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25em;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 
-/* ---------------------------------------------------- */
-
-
+/* ---------------- header image --------------- */
 
 .header-image {
   background-image: url("/images/header_image.jpg");
@@ -182,100 +94,7 @@ footer {
 }
 
 
-/* Form and button styling */
-
-.form {
-  display: flex;
-  justify-content: center;
-}
-
-.buttons  {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-form {
-  /* background: purple; */
-  font-family: 'Roboto', sans-serif;
-  /* padding: 25px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 400px;
-}
-
-label {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.25em;
-}
-
-input {
-    /* width: 80%; */
-}
-
-input[type=text] {
-    /* width: 80%; */
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #3AAFA9;
-    border-radius: 4px;
-    font-family: 'EB Garamond', serif;
-    font-size: 1.25em;
-    width: 100%;
-    height: 50px;
-}
-
-input[type=text]:focus {
-    border: 3px solid #2B7A78;
-
-}
-
-input[type=submit] {
-    background-color: #2B7A78;
-    border: 2px solid #3AAFA9;
-    color: white;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 20px;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.25em;
-
-}
-
-input[type=submit]:hover {
-  background-color: #DEF2F1;
-    color: black;
-}
-
-input[type=date] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: 2px solid #3AAFA9;
-  border-radius: 4px;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.25em;
-  height: 50px;
-}
-
-select {
-  padding: 20px;
-  margin: 8px 0;
-  height: 50px;
-  /* box-sizing: border-box; */
-  border: 2px solid #3AAFA9;
-  border-radius: 4px;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.25em;
-}
-
-
-/* Main box for templates to be inserted */
+/* ------- Main box for templates (yield) ------------ */
 
 .flex {
   display: flex;
@@ -297,22 +116,14 @@ select {
   font-size: 1em;
 }
 
-/* .front-page {
-  display: flex;
-  flex-direction: row;
-} */
 
-/* index.erb divs */
+/* -------------- index.erb divs ----------------*/
+
 .welcome {
   display: flex;
   flex-direction: row;
   background: #DEF2F1;
 }
-
-/* .latest-rides {
-  display: flex;
-  flex-direction: column;
-} */
 
 .route {
   display: flex;
@@ -339,7 +150,7 @@ select {
   flex-direction: row;
 }
 
-/* Cyclist profile divs */
+/*  --------flex-box divs for listing all cyclists, riders, rides ----------*/
 
 .statistics-cell {
   display: flex;
@@ -357,8 +168,6 @@ select {
   line-height: 50px;
   text-indent: 10px;
 }
-
-/* All cyclist-ride-route view */
 
 .items {
   display: flex;
@@ -387,7 +196,7 @@ select {
   text-align: center;
 }
 
-/* Leaderboards  */
+/* --------------- Leaderboards  -------------*/
 
 .leaderboard-box {
 
