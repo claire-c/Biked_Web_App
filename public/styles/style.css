@@ -41,8 +41,17 @@ p {
   font-size: 2em;
 }
 
-a {
+a:link {
   text-decoration: none;
+  color: #265077;
+}
+
+a:hover {
+  color: purple;
+}
+
+a:visited {
+  color: #33266E;
 }
 
 footer {
@@ -287,7 +296,6 @@ select {
 .list {
   display: flex;
   flex-direction: column;
-  /* padding: 10px; */
 }
 
 .items-box {
@@ -302,4 +310,28 @@ select {
 
 .box-image {
   text-align: center;
+}
+
+/* Leaderboards  */
+
+.leaderboard-box {
+
+  padding: 10px;
+  margin: 20px;
+  width: 300px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.25em;
+  border: 2px solid #3AAFA9;
+}
+
+.leaderboard-cell {
+  display: flex;
+  flex-direction: row;
+  background: #A8D0E6;
+  height: 50px;
+  margin-bottom: 20px;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1em;
+  line-height: 50px;
+  text-indent: 10px;
 }

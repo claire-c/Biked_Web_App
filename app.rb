@@ -4,6 +4,7 @@ require('pry')
 require_relative('controllers/cyclists_controller')
 require_relative('controllers/rides_controller')
 require_relative('controllers/routes_controller')
+require_relative('controllers/leaderboards_controller')
 require_relative('models/image_carousel.rb')
 
 get '/' do

@@ -1,10 +1,10 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require('pry')
-require_relative('controllers/cyclists_controller')
-require_relative('controllers/rides_controller')
-require_relative('controllers/routes_controller')
-require_relative('models/image_carousel.rb')
+require_relative('../models/cyclist.rb')
+require_relative('../models/ride.rb')
+require_relative('../models/route.rb')
+require_relative('../models/image_carousel.rb')
 
 get '/leaderboards' do
   @rides = Ride.ordered()

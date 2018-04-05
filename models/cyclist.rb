@@ -81,6 +81,7 @@ class Cyclist
     return sum
   end
 
+#returns the cumulative total of all miles from all rides.
   def total_miles()
     sum = 0
     routes().each {|route| sum += route.distance}

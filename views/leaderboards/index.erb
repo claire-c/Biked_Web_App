@@ -1,0 +1,38 @@
+
+<div class="welcome">
+  <h1>Leaderboards</h1>
+</div>
+
+<div class="list">
+    <div class="items">
+      <div class="leaderboard-box">
+        <h1>Most miles</h1>
+        <%miles = Cyclist.most_miles()%>
+        <% miles.each do |cyclist| %>
+        <div class="leaderboard-cell">
+        <a href="cyclists/<%=cyclist.id%>"><%= cyclist.name() %></a>: <%= cyclist.total_miles %> miles
+       </div>
+        <% end %>
+      </div>
+      <div class="leaderboard-box">
+        <h1>Most climb</h1>
+        <%climb = Cyclist.most_climb()%>
+        <% climb.each do |cyclist| %>
+        <div class="leaderboard-cell">
+        <a href="cyclists/<%=cyclist.id%>"><%= cyclist.name() %></a>: <%= cyclist.total_climb %> feet
+      </div>
+        <% end %>
+      </div>
+      <div class="leaderboard-box">
+        <h1>Most rides</h1>
+        <%rides = Cyclist.most_rides()%>
+        <% rides.each do |cyclist| %>
+        <div class="leaderboard-cell">
+        <a href="cyclists/<%=cyclist.id%>"><%= cyclist.name() %></a>: <%= cyclist.total_routes %>
+      </div>
+        <% end %>
+      </div>
+
+    </div>
+
+</div>
