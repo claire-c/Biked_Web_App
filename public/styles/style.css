@@ -158,6 +158,7 @@ footer {
   width: 100%;
   height: 200px;
   background-position: 0% 49%;
+  /* min-height: 1px; */
 }
 
 
