@@ -98,24 +98,27 @@ class Route
     return sum / (all_rides().count)
   end
 
-#Sort cyclists' times from quickest to slowest for rides on instance of route. Returns array of ride objects.
+#Returns array of ride objects from quickest to slowest.
   def leaderboard()
     rides = all_rides()
     leaderboard = rides.sort{ |ride| ride.completion_time() }
     return leaderboard
   end
 
+#Returns route object with most rides logged.
   def self.most_popular()
     popular = all().sort { |route1, route2|
     route1.total_cyclists <=> route2.total_cyclists }
     return popular.last()
   end
 
+#Returns route object with longest distance.
   def self.longest()
     distances = all().sort { |route1, route2| route1.distance <=> route2.distance }
     return distances.last()
   end
 
+#Returns route object with highest elevation.
   def self.highest()
     highest = all().sort { |route1, route2| route1.elevation <=> route2.elevation }
     return highest.last()

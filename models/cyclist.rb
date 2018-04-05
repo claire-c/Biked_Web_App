@@ -75,23 +75,26 @@ class Cyclist
     return routes
   end
 
+#Returns integer with total climb from all logged rides.
   def total_climb()
     sum = 0
     routes().each {|route| sum += route.elevation}
     return sum
   end
 
-#returns the cumulative total of all miles from all rides.
+#returns integer with the total of all miles from all rides.
   def total_miles()
     sum = 0
     routes().each {|route| sum += route.distance}
     return sum
   end
 
+#Returns integer of logged rides.
   def total_routes()
     routes().length
   end
 
+#Returns array of strings - route name logged.
   def route_names()
     titles = routes().map {|route| route.title}
     return titles

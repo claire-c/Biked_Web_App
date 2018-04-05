@@ -8,7 +8,7 @@
   <% @cyclists.each do |cyclist|  %>
     <div class="items-box">
     <div class="stats-cell"><%= cyclist.name() %></div>
-    <div class="box-image"> <img src="/images/bicycle.png"></div>
+    <div class="box-image"> <img src="/images/bicycle.png" alt="bicycle icon"></div>
     <a href="/cyclists/<%= cyclist.id %>"><button>Go to profile</button></a>
   </div>
   <% end %>

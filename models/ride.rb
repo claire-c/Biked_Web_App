@@ -67,10 +67,12 @@ class Ride
     SqlRunner.run(sql, values)
   end
 
+#Returns cyclist object associated with ride.
   def get_cyclist()
     Cyclist.find(@cyclist_id)
   end
 
+#Returns route object associated with ride.
   def get_route()
     Route.find(@route_id)
   end

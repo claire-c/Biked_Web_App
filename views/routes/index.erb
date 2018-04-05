@@ -8,7 +8,7 @@
   <% @routes.each do |route|  %>
     <div class="items-box">
     <div class="stats-cell"><%= route.title() %></div>
-    <div class="box-image"> <img src="/images/route.png"></div>
+    <div class="box-image"> <img src="/images/route.png" alt="route icon"></div>
     <a href="/routes/<%= route.id %>"><button>Go to route details</button></a>
   </div>
   <% end %>
