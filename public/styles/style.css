@@ -301,6 +301,5 @@ select {
 }
 
 .box-image {
-  justify-content: center;
-
+  text-align: center;
 }

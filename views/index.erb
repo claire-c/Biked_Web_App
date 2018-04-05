@@ -19,16 +19,16 @@
     <button>
       <a href="/routes">Go to routes</a>
     </button>
-    
+
   </div>
 
   <div class="cell">
     <div class="ride headline"><h1>Latest rides</h1></div>
     <% num = 0 %>
      <% @rides.each do |ride| %>
-     <div class="ride-box"
-       <br>Name: <a href="/cyclists/<%=ride.cyclist_id%>"><%= ride.get_cyclist().name %></a></br>
-       <br>Route: <a href="/routes/<%=ride.route_id%>"><%= ride.get_route().title %></a></br>
+     <div class="ride-box">
+       <br><a href="/cyclists/<%=ride.cyclist_id%>"><%= ride.get_cyclist().name %></a></br>
+       <br><a href="/routes/<%=ride.route_id%>"><%= ride.get_route().title %></a></br>
        <br>Date logged:<a href="rides/<%=ride.id%>"> <%= ride.date_logged %></a></br>
        <% num += 1 %>
        <% break if num == 5 %>
