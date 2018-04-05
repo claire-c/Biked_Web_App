@@ -142,6 +142,9 @@ footer {
 .ride-box {
   font-family: 'EB Garamond', serif;
   font-size: 1.5em;
+  background: #A8D0E6;
+  text-indent: 10px;
+  margin: 5px;
 }
 
 .image {
