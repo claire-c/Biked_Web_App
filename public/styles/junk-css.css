@@ -4,12 +4,6 @@
 <%= route %></p>
 <% end %>
 
-<%miles = @cyclist.most_miles()%>
-<% miles.each do |cyclist| %>
-<% if cyclist.total_miles != nil %>
-<%= cyclist.name() %>: <%= cyclist.total_miles %> miles
-<% end %>
-<% end %>
 
 
 

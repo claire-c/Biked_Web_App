@@ -9,14 +9,35 @@
   </head>
   <body>
   <div class="navbar">
-    <div class="nav item1"><a href="/">Home</a></div>
-    <div class="nav item2"><a href="/cyclists/new">Add cyclist</a></div>
-    <div class="nav item3"><a href="/rides/new">Add ride</a></div>
-    <div class="nav item4"><a href="/routes/new">Add route</a></div>
-    <div class="nav item5"><a href="/cyclists">Cyclists</a></div>
-    <div class="nav item6"><a href="/routes">Routes</a></div>
-    <div class="nav item7"><a href="/rides">Rides</a></div>
-    <div class="nav item8"><a href="/leaderboards">Leaderboards</a></div>
+
+    <div class="nav"><a href="/">Home</a></div>
+
+    <div class="dropdown">
+      <div class="dropbtn">Cyclists</div>
+      <div class="dropdown-content">
+        <a href="/cyclists">See all cyclists</a>
+        <a href="/cyclists/new">Add new cyclist</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <div class="dropbtn">Rides</div>
+      <div class="dropdown-content">
+        <a href="/rides">See all rides</a>
+        <a href="/rides/new">Add new ride</a>
+      </div>
+    </div>
+
+
+    <div class="dropdown">
+      <div class="dropbtn">Routes</div>
+      <div class="dropdown-content">
+        <a href="/routes">See all routes</a>
+        <a href="/routes/new">Add new route</a>
+      </div>
+    </div>
+
+    <div class="nav"><a href="/leaderboards">Leaderboards</a></div>
   </div>
 
   <div class="header-image">
