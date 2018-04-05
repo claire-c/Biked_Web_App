@@ -20,7 +20,8 @@ class Route
   end
 
   def self.all()
-    sql = "SELECT * FROM routes;"
+    sql = "SELECT * FROM routes
+            ORDER BY title;"
     result = SqlRunner.run(sql)
     return result.map { |route| Route.new(route)}
   end
