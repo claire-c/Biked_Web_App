@@ -24,13 +24,12 @@ button {
   font-family: 'Roboto', sans-serif;
   font-size: 1.25em;
   width: 100%;
-  }
+}
 
   button:hover {
     background-color: #DEF2F1;
       color: black;
   }
-}
 
 p {
   font-family: 'EB Garamond', serif;
@@ -203,7 +202,6 @@ footer {
 /* --------------- Leaderboards  -------------*/
 
 .leaderboard-box {
-
   padding: 10px;
   margin: 20px;
   width: 300px;
