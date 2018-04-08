@@ -1,4 +1,4 @@
-require('pry')
+# require('pry')
 require_relative('../db/sql_runner.rb')
 require_relative('route.rb')
 require_relative('cyclist.rb')

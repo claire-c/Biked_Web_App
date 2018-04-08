@@ -1,6 +1,6 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
-require( 'pry' )
+# require( 'pry' )
 require_relative('../models/cyclist.rb')
 
 
