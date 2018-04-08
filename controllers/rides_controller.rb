@@ -1,5 +1,5 @@
 require( 'sinatra' )
-require( 'sinatra/contrib/all' )
+require( 'sinatra/contrib/all' ) if development?
 # require( 'pry' )
 require_relative('../models/ride.rb')
 
