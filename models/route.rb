@@ -94,8 +94,12 @@ class Route
 #average time to complete a route. Returns an integer.
   def average_time()
     sum = 0
-    all_rides().each { |ride| sum += ride.completion_time() }
-    return sum / (all_rides().count)
+    if all_rides.length != 0
+      all_rides().each { |ride| sum += ride.completion_time() }
+      return sum / (all_rides().count)
+    else
+      return 0
+    end 
   end
 
 #Returns array of ride objects from quickest to slowest.
